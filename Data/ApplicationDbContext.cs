@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using OnlineRockyWeb.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,5 +13,7 @@ namespace OnlineRockyWeb.Data
         {
 
         }
+
+        public DbSet<Category> Category { get; set; }
     }
 }
