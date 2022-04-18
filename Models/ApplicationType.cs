@@ -7,16 +7,12 @@ using System.Threading.Tasks;
 
 namespace OnlineRockyWeb.Models
 {
-    public class Category
+    public class ApplicationType
     {
         [Key]
         public int Id { get; set; }
-        [Required] // обязательное поле
         public string Name { get; set; }
 
-        [DisplayName("Display Order")]
-        [Required] // обязательное поле
-        [Range(1,int.MaxValue,ErrorMessage ="Должен быть больше 0")]
-        public int DisplayOrder { get; set; }
+
     }
 }

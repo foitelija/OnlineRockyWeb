@@ -13,7 +13,8 @@ namespace OnlineRockyWeb.Data
         {
 
         }
-
+        // Сюда добавляем новые таблицы, после добавления: Средства - NuGet - Консоль NuGet - [add-migration {Name}] - update-database
         public DbSet<Category> Category { get; set; }
+        public DbSet<ApplicationType> ApplicationType { get; set; }
     }
 }
