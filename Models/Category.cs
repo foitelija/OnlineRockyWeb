@@ -11,8 +11,11 @@ namespace OnlineRockyWeb.Models
     {
         [Key]
         public int Id { get; set; }
+        [Required] // обязательное поле
         public string Name { get; set; }
 
+        [Required]
+        [Range(1,int.MaxValue, ErrorMessage ="Должно быть более 0")]
         [DisplayName("Display Order")]
         public int DisplayOrder { get; set; }
     }

@@ -36,9 +36,13 @@ namespace OnlineRockyWeb.Controllers
         [ValidateAntiForgeryToken] // токен безопасности
         public IActionResult Create(Category obj)
         {
+            if(ModelState.IsValid)
+            {
             _db.Category.Add(obj); // обращаемся  к нашей БД для заполнения полей
             _db.SaveChanges(); // сохраняем 
             return RedirectToAction("Index"); // возвращаем обновлённый результат
+            }
+            return View(obj);
         }
     }
 }
