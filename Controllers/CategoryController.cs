@@ -31,6 +31,7 @@ namespace OnlineRockyWeb.Controllers
         }
 
         //Post - CREATE
+
         [HttpPost]
         [ValidateAntiForgeryToken] // токен безопасности
         public IActionResult Create(Category obj)
